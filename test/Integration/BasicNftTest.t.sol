@@ -2,15 +2,15 @@
 pragma solidity ^0.8.20;
 
 import {Test} from "forge-std/Test.sol";
-import {BasicNft} from "../src/BasicNft.sol";
-import {DeployBasicNft} from "../script/DeployBasicNft.s.sol";
+import {BasicNft} from "../../src/BasicNft.sol";
+import {DeployBasicNft} from "../../script/DeployBasicNft.s.sol";
 
 contract BasicNftTest is Test {
     DeployBasicNft public deployer;
     BasicNft public basicNft;
     address public USER = makeAddr("bob");
     string public constant SHIBA_INU =
-        "ipfs://bafybeicycym6bszrowva73ltneyluiqil2qbpwqv2grv3qfm3e7xc6k3ya/?filename=shiba-inu.json";
+        "ipfs://bafybeicycym6bszrowva73ltneyluiqil2qbpwqv2grv3qfm3e7xc6k3ya";
 
     function setUp() public {
         deployer = new DeployBasicNft();
